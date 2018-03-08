@@ -6,12 +6,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Zad11 {
-   private static final String REGEX = "[- .:,]+";
-	 
-  /**
+   /**
    * Zmodyfikuj zadanie 10, tak aby słowa były posortowane względem długości.
    *
    * @throws IOException 
@@ -21,7 +18,10 @@ public class Zad11 {
 	            Files.newBufferedReader(Paths.get("wiersz.txt"))) {
 
 	    	List<String> words = reader.lines()
-	              .collect(Collectors.toList());
+	    			.map(x -> x.toLowerCase())
+	    			.distinct()
+	    			.sorted((x,y) -> x.length() - y.length())
+	    			.collect(Collectors.toList());
 
 	          words.stream().forEach(System.out::println);
 	        }

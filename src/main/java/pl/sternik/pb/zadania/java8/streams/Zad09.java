@@ -22,6 +22,7 @@ public class Zad09 {
 	            Files.newBufferedReader(Paths.get("wiersz.txt"))) {
 
 	    	List<String> uniqueWords = reader.lines()
+	    		  .distinct()
 	              .collect(Collectors.toList());
 
 	          uniqueWords.stream()

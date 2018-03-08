@@ -19,9 +19,9 @@ public class Zad04 {
 
     StringBuilder sb = new StringBuilder();
 
-    map.forEach( (k, v) -> sb.append(String.format("%s-%s", k, v)));
+    map.forEach( (k, v) -> sb.append(String.format("%s-%s\n", k, v)));
     String result = sb.toString();
-    System.out.println("rezultat = " + result);
+    System.out.println("rezultat = \n" + result);
   }
 
 }
