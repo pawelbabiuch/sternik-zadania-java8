@@ -26,6 +26,7 @@ public class Zad10 {
 	    			.collect(Collectors.toList());
 
 	          words.stream().forEach(System.out::println);
+	          
 	        }
 	}
 }
